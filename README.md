@@ -1,12 +1,12 @@
 # Setup
 
 
-` cd ~
+` cd ~ `
 
-mkdir .vim
+` mkdir .vim `
 
-cd .vim
+` cd .vim `
 
-git clone https://github.com/andyedison/vim-config.git 
+` git clone https://github.com/andyedison/vim-config.git `
 
-ln -s ~/.vim/vimrc ~/.vimrc `
+` ln -s ~/.vim/vimrc ~/.vimrc `
