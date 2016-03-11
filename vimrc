@@ -2,6 +2,9 @@
 " Andy Edison .vimrc
 "
 
+"""""" Loading Plugins with Pathogen
+execute pathogen#infect()
+
 
 """""" APPEARANCE
 
