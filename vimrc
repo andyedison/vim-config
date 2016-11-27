@@ -6,9 +6,14 @@
 filetype plugin on
 filetype indent on
 
-"""""" Loading Plugins with Pathogen
-call pathogen#infect()
-
+"""""" Loading Plugins with Vim-Plug
+call plug#begin()
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'fatih/vim-go'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'SirVer/ultisnips'
+Plug 'fatih/molokai'
+call plug#end()
 
 """""" APPEARANCE
 
