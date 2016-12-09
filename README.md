@@ -9,4 +9,6 @@
 
 ` git clone https://github.com/andyedison/vim-config.git `
 
+` mkdir swap `
+
 ` ln -s ~/.vim/vimrc ~/.vimrc `
