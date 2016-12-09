@@ -22,12 +22,9 @@ call plug#end()
 
 " color scheme
 syntax on
-""colorscheme darkspectrum2
-"" colorscheme Tomorrow-Night
-""colorscheme Tomorrow-Night-Eighties
+colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
-colorscheme molokai
 
 " font
 set guifont=Courier\ New:h13
@@ -76,6 +73,10 @@ noremap <C-S-Tab> :tabp<CR>
 
 "map F2 to toggle wrapping
 "nnoremap <F2> :set nowrap! <CR>
+"
+
+" Store swap files in fixed location, not current directory
+set dir=~/.vim/swap//,/var/tmp//,/tmp//,.
 
 
 "
@@ -103,6 +104,7 @@ nnoremap <leader>a :cclose<CR>
 
 " shortcuts for building and running go programs
 " autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 
 " run :GoBuild or :GoTestCompile based on the go file
@@ -115,7 +117,6 @@ function! s:build_go_files()
     endif
 endfunction
 
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 
 " easier go-coverage-toggle calling
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
