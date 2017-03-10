@@ -13,6 +13,7 @@ Plug 'fatih/vim-go'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
 Plug 'fatih/molokai'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 """""" APPEARANCE
@@ -74,6 +75,9 @@ noremap <C-S-Tab> :tabp<CR>
 "map F2 to toggle wrapping
 "nnoremap <F2> :set nowrap! <CR>
 "
+" Toggle paste mode
+" "   (prefer this over 'pastetoggle' to echo current state)
+nmap <leader>p :setlocal paste! paste?<cr>
 
 " Store swap files in fixed location, not current directory
 set dir=~/.vim/swap//,/var/tmp//,/tmp//,.
@@ -137,4 +141,6 @@ autocmd FileType go nmap <Leader>i <Plug>(go-info)
 " `gd` calls GoDef, ctrl-t goes back
 " `K` calls GoDoc
 
-
+" some YCM settings
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
