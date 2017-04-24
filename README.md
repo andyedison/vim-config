@@ -5,10 +5,8 @@
 
 ` mkdir .vim `
 
-` cd .vim `
+` git clone https://github.com/andyedison/vim-config.git ~/.vim`
 
-` git clone https://github.com/andyedison/vim-config.git `
-
-` mkdir swap `
+` mkdir ~/.vim/swap `
 
 ` ln -s ~/.vim/vimrc ~/.vimrc `
